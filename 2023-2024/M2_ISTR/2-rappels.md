@@ -14,7 +14,8 @@ monofont: Source Code Pro
 
 \centering
 
-[`https://homepages.laas.fr/gsaurel/teach/2023-2024/M2_ISTR/2-rappels.pdf`](https://homepages.laas.fr/gsaurel/teach/2023-2024/M2_ISTR/2-rappels.pdf)
+[`https://homepages.laas.fr/gsaurel/teach/
+2023-2024/M2_ISTR/2-rappels.pdf`](https://homepages.laas.fr/gsaurel/teach/2023-2024/M2_ISTR/2-rappels.pdf)
 
 ### Under License
 
