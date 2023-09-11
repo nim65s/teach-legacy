@@ -1,0 +1,20 @@
+image: gitlab.laas.fr:4567/gsaurel/talks
+
+build:
+  stage: build
+  script:
+    - make all
+  artifacts:
+    paths:
+      - public
+
+deploy:
+  stage: deploy
+  only:
+    refs:
+      - main
+  before_script:
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | ssh-add -
+  script:
+    - make deploy
