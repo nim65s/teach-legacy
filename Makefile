@@ -19,7 +19,7 @@ check: all
 
 deploy: check
 	chmod a+r,g+w ${OUTPUTS}
-	rsync -avzP --delete public/ gsaurel-deploy@memmos.laas.fr:${DEST}
+	rsync -avzP --delete -e "ssh -o UserKnownHostsFile=.known_hosts" public/ gsaurel-deploy@memmos.laas.fr:${DEST}
 
 clean:
 	rm -f ${OUTPUTS} public/index.html
