@@ -1,5 +1,5 @@
 ---
-title: Git Python & C++
+title: Git
 subtitle: Université Toulouse Paul Sabatier - KEAT9TA1
 theme: laas
 date: 2023-09-12
