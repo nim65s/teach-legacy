@@ -12,9 +12,16 @@ deploy:
   stage: deploy
   only:
     refs:
-      - main
+      - main@gsaurel/teach
+  variables:
+    GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=.known_hosts"
   before_script:
     - eval $(ssh-agent -s)
     - echo "$SSH_PRIVATE_KEY" | ssh-add -
+    - git config --global --add safe.directory $CI_PROJECT_DIR
+    - git checkout main
+    - git reset --hard $CI_COMMIT_SHA
   script:
+    - touch public/*.pdf
     - make deploy
+    - git push git@github.com:nim65s/teach main

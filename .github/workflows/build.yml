@@ -1,6 +1,9 @@
 name: CI/CD
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -15,6 +18,22 @@ jobs:
       - uses: actions/upload-pages-artifact@v1
         with:
           path: public/
+
+  mirror:
+    name: Mirror to gitlab
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Mirror to gitlab
+        env:
+          GIT_SSH_COMMAND: ssh -o UserKnownHostsFile=.known_hosts
+        run: |
+          eval $(ssh-agent -s)
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | ssh-add -
+          git push git@gitlab.laas.fr:gsaurel/teach main
 
   deploy:
     name: publish on github pages
