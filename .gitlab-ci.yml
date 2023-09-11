@@ -14,7 +14,7 @@ deploy:
     refs:
       - main@gsaurel/teach
   variables:
-    GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=.known_hosts"
+    GIT_SSH_COMMAND: "ssh -o UserKnownHostsFile=.known_hosts -vvv"
   before_script:
     - eval $(ssh-agent -s)
     - echo "$SSH_PRIVATE_KEY" | ssh-add -
