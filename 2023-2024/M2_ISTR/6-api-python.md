@@ -63,7 +63,9 @@ if __name__ == "__main__":
 
 ## Django
 
-[![Django](media/django.png){width=3cm}](https://www.djangoproject.com/)
+![Django](media/django.png){width=3cm}
+
+[Django](https://www.djangoproject.com/)
 
 . . .
 
@@ -110,7 +112,7 @@ $ ./manage.py migrate
 $ ./manage.py shell
 ```
 
-## Interract with your database
+## Interact with your database
 
 ```python
 In [1]: from mysite.models import *

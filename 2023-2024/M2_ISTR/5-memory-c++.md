@@ -121,9 +121,9 @@ public:
 . . .
 
 ```cpp
-const Point a{};
-const Point b{1.12};
-const Point c{3, M_PI_4};
+const PolarPoint a{};
+const PolarPoint b{1.12};
+const PolarPoint c{3, M_PI_4};
 ```
 
 ## Destructors
@@ -232,7 +232,7 @@ void send(unique_ptr<X> x, string_view destination)  {
 
 - Unique pointers: `std::unique_ptr<T>`
 
-## Smart Pointers exaple
+## Smart Pointers example
 
 ```cpp
 class Resource {
