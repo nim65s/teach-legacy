@@ -225,3 +225,9 @@ git clone https://github.com/nim65s/example.git
 ## Merci Matthieu :)
 
 <https://homepages.laas.fr/matthieu/talks/git.pdf>
+
+# Références
+
+## Tutoriel en ligne
+
+<https://learngitbranching.js.org/?locale=fr_FR>
