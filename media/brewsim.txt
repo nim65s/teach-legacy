@@ -1,0 +1,61 @@
+@startuml
+
+class Département << (M,green) >> {
+ +numéro
+ +prix/m²
+}
+
+class Usine << (M,green) >> {
+ +département
+ +taille
+ +machines
+ +recettes
+ +stocks
+}
+
+class Machine << (M,green) >> {
+ +nom
+ +prix
+}
+
+class Action << (M,green) >> {
+ +machine
+ +commande
+ +durée
+ +ingrédients
+ -action
+}
+
+class Recette << (M,green) >> {
+ +nom
+ +action
+}
+
+class Ingrédient << (M,green) >> {
+ +nom
+}
+
+class Prix << (M,green) >> {
+ +ingrédient
+ +département
+ +prix
+}
+
+class QuantitéIngrédient << (M,green) >> {
+ +ingrédient
+ +quantité
+}
+
+Département -* Usine::département
+Usine::machines o-- Machine
+Usine::recettes o-- Recette
+Usine::stocks o-- QuantitéIngrédient
+Action::machine *-up- Machine
+Action::action *-right- Action
+Action::ingrédients o-left- QuantitéIngrédient
+Recette::action *-- Action
+Prix::ingrédient *-- Ingrédient
+Département -down-* Prix::département
+QuantitéIngrédient::ingrédient *-left- Ingrédient
+
+@enduml
