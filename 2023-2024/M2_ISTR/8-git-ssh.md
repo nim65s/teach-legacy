@@ -65,5 +65,6 @@ $ cat ~/.ssh/id_ed25519.pub
 ## Configurer git avec SSH
 
 ```bash
-$ git remote set-url origin git@github.com:votre-nom/votre-projet.git
+$ git remote set-url origin \
+    git@github.com:votre-nom/votre-projet.git
 ```
