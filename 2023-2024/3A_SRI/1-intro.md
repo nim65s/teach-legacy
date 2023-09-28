@@ -1,6 +1,6 @@
 ---
 title: Introduction
-subtitle: Université Toulouse Paul Sabatier - KEAT9TA1
+subtitle: Université Toulouse Paul Sabatier
 theme: laas
 date: 2023-09-28
 author: Guilhem Saurel
