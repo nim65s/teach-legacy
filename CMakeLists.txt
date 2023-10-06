@@ -6,12 +6,14 @@ project(${PROJECT_NAME})
 option(CPR_ENABLE_SSL "" OFF)
 
 include(FetchContent)
-FetchContent_Declare(json
-    DOWNLOAD_EXTRACT_TIMESTAMP OFF
-    URL "https://github.com/nlohmann/json/releases/download/v3.11.2/json.tar.xz")
-FetchContent_Declare(cpr
-    DOWNLOAD_EXTRACT_TIMESTAMP OFF
-    URL "https://github.com/libcpr/cpr/archive/refs/tags/1.10.4.tar.gz")
+FetchContent_Declare(
+  json
+  DOWNLOAD_EXTRACT_TIMESTAMP OFF
+  URL "https://github.com/nlohmann/json/releases/download/v3.11.2/json.tar.xz")
+FetchContent_Declare(
+  cpr
+  DOWNLOAD_EXTRACT_TIMESTAMP OFF
+  URL "https://github.com/libcpr/cpr/archive/refs/tags/1.10.4.tar.gz")
 FetchContent_MakeAvailable(json cpr)
 
 add_executable(${PROJECT_NAME} ${PROJECT_NAME}.cpp)
