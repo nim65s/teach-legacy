@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.14)
 set(PROJECT_NAME "low_level")
 project(${PROJECT_NAME})
 
+option(CPR_ENABLE_SSL "" OFF)
+
 include(FetchContent)
 FetchContent_Declare(json
     DOWNLOAD_EXTRACT_TIMESTAMP ON
