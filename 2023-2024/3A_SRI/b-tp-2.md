@@ -50,35 +50,4 @@ Mail: [gsaurel@laas.fr](mailto::gsaurel@laas.fr)
 
 ## Architecture
 
-![Boss / Manager / Minions / Task](media/architecture.png)
-
-## Task: constructeur
-
-```python
-class Task:
-    def __init__(self, identifier, size=None):
-        self.identifier = identifier
-        # choosee the size of the problem
-        self.size = size or np.random.randint(
-            300, 3_000
-        )
-        # Generate the input of the problem
-        self.a = np.random.rand(self.size, self.size)
-        self.b = np.random.rand(self.size)
-        # prepare room for the results
-        self.x = np.zeros((self.size))
-        self.time = 0
-```
-
-## Task: runtime
-
-```python
-class Task:
-    def __init__(self, identifier, size=None):
-        ...
-
-    def work(self):uiestauierst
-        start = time.perf_counter()
-        self.x = np.linalg.solve(self.a, self.b)
-        self.time = time.perf_counter() - start
-```
+![Boss / Manager / Minions / Task](media/architecture.png){height=7cm}
