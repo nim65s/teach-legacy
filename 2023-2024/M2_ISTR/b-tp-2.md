@@ -15,7 +15,7 @@ monofont: Source Code Pro
 \centering
 
 [`https://homepages.laas.fr/gsaurel/teach/
-2023-2024/M2_ISTR/8-tp-2.pdf`](https://homepages.laas.fr/gsaurel/teach/2023-2024/M2_ISTR/8-tp-2.pdf)
+2023-2024/M2_ISTR/b-tp-2.pdf`](https://homepages.laas.fr/gsaurel/teach/2023-2024/M2_ISTR/b-tp-2.pdf)
 
 ### Under License
 
@@ -34,7 +34,7 @@ monofont: Source Code Pro
 \centering
 
 [`https://gitlab.laas.fr/gsaurel/teach :
-2023-2024/M2_ISTR/8-tp-2.md`](https://gitlab.laas.fr/gsaurel/teach/-/blob/main/2023-2024/M2_ISTR/8-tp-2.md)
+2023-2024/M2_ISTR/b-tp-2.md`](https://gitlab.laas.fr/gsaurel/teach/-/blob/main/2023-2024/M2_ISTR/b-tp-2.md)
 
 ### Contact
 

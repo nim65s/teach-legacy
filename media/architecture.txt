@@ -1,0 +1,35 @@
+@startuml
+
+class multiprocessing.BaseManager {
+}
+
+class QueueManager {
+ task_queue
+ result_queue
+}
+
+multiprocessing.BaseManager <|-- QueueManager
+
+class QueueClient {
+}
+
+class Boss {
+}
+
+class Minion {
+}
+
+QueueClient <|-- Boss
+QueueClient <|-- Minion
+
+class Task {
+ identifier
+ size
+ a
+ b
+ x
+ time
+ work()
+}
+
+@enduml
