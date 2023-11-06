@@ -46,10 +46,10 @@ Mail: [gsaurel@laas.fr](mailto::gsaurel@laas.fr)
 
 ## Pre-requis
 
-- Git: `git -v`
+- Git: `git --version`
 - Python: `python -V` (`python3` ?)
 - Pip: `python -m pip -V`
-- Venv: `python -m venv`
+- Venv: `python -m venv` (optionel)
 
 ## Création d’un projet
 
