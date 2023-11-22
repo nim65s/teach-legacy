@@ -65,7 +65,7 @@ $ pip install -U pip
 
 ## Configuration d’un dépôt distant
 
-- Créer un compte un un dépôt sur github, puis
+- Créer **un compte** et **un dépôt/projet** sur github, puis
 
 ```bash
 $ ssh-keygen -t ed25519
@@ -77,11 +77,11 @@ $ cat ~/.ssh/id_ed25519.pub
 ## Publication du projet
 
 ```bash
-$ git branch -M main
 $ git remote add origin \
     git@github.com:votre-nom/votre-dépôt.git
 $ git add .
 $ git commit -m "start project"
+$ git branch -M main
 $ git push -u origin main
 ```
 
