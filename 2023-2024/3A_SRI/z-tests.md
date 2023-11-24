@@ -141,6 +141,20 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
+# Tierces parties
+
+## Python
+
+- pytest
+- tox
+- nose
+
+## C++
+
+- Boost unit test framework
+- catch2
+- Gtest
+
 # Intégration continue
 
 ## Github
