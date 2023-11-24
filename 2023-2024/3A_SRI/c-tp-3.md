@@ -86,7 +86,8 @@ def __eq__(self, other: "Task") -> bool:
 - une seconde à partir de la sérialisation de la première
 
     ```python
-    b = Task.from_json(t.to_json())
+    txt = a.to_json()
+    b = Task.from_json(txt)
     ```
 
 - puis s’assure que `a == b`
