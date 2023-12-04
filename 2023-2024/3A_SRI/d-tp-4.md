@@ -52,6 +52,7 @@ Mail: [gsaurel@laas.fr](mailto::gsaurel@laas.fr)
 
 - <https://github.com/libcpr/cpr>
 - <https://github.com/nlohmann/json>
+- <https://eigen.tuxfamily.org>
 
 ## CMake
 
