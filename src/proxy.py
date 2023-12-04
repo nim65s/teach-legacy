@@ -4,12 +4,16 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from manager import QueueClient
 
 
-class Proxy(QueueClient, BaseHTTPRequestHandler):
+class Proxy(BaseHTTPRequestHandler):
+    def __init__(self, *args, **kwargs):
+        self.client = QueueClient()
+        super().__init__(*args, **kwargs)
+
     def do_GET(self):
         self.send_response(200)
         self.send_header("Content-type", "application/json")
         self.end_headers()
-        t = self.task_queue.get()
+        t = self.client.task_queue.get()
         self.wfile.write(bytes(t.to_json(), "utf-8"))
 
 
