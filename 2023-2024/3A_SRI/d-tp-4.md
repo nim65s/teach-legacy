@@ -59,7 +59,10 @@ Mail: [gsaurel@laas.fr](mailto::gsaurel@laas.fr)
 <https://gitlab.laas.fr/gsaurel/teach/-/blob/main/src/CMakeLists.txt>
 
 ```bash
-cmake -B build -S .  # configure
-cmake --build build  # compile
-./build/low_level    # run
+# configure
+cmake -B build -S . -DCMAKE_CXX_STANDARD=17
+# compile
+cmake --build build
+# run
+./build/low_level
 ```
