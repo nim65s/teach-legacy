@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
+set(CMAKE_CXX_STANDARD 17)
 
 set(PROJECT_NAME "low_level")
 project(${PROJECT_NAME})
@@ -19,9 +20,12 @@ FetchContent_Declare(
   DOWNLOAD_EXTRACT_TIMESTAMP OFF
   URL "https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz")
 FetchContent_MakeAvailable(json eigen cpr)
+find_package(OpenMP REQUIRED COMPONENTS CXX)
 
 add_executable(${PROJECT_NAME} ${PROJECT_NAME}.cpp)
 target_link_libraries(${PROJECT_NAME}
     nlohmann_json::nlohmann_json
     cpr::cpr
-    Eigen3::Eigen)
+    Eigen3::Eigen
+    OpenMP::OpenMP_CXX
+)

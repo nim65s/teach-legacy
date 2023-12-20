@@ -60,7 +60,7 @@ Mail: [gsaurel@laas.fr](mailto::gsaurel@laas.fr)
 
 ```bash
 # configure
-cmake -B build -S . -DCMAKE_CXX_STANDARD=17
+cmake -B build -S .
 # compile
 cmake --build build
 # run

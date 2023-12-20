@@ -66,7 +66,7 @@ Créez de fichier `low_level.cpp` avec:
 ## Compilation du projet
 
 ```
-$ cmake -B /tmp/build -S . -DCMAKE_CXX_STANDARD=17
+$ cmake -B /tmp/build -S .
 $ cmake --build /tmp/build
 $ /tmp/build/low_level
 ```
