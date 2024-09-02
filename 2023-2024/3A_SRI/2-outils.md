@@ -58,7 +58,7 @@ Adaptez votre environement
 
 ## Clavier
 
-![bépo](media/bépo.png)
+![bépo](media/bepo.png)
 [`https://bépo.fr`](https://bepo.fr)
 
 # Style

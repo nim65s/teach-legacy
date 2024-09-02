@@ -1,3 +1,4 @@
+PREFIX ?= public
 SOURCES = $(filter-out README.md, $(wildcard */*/*.md))
 OUTPUTS = $(SOURCES:%.md=public/%.pdf)
 DEST = "/usr/local/homepages/gsaurel/teach"
@@ -13,7 +14,7 @@ public/%.pdf: %.md
 		-o $@ $<
 
 public/index.html: ${SOURCES} index.py
-	./index.py
+	python3 index.py
 
 check: all
 
@@ -23,3 +24,6 @@ deploy: check
 
 clean:
 	rm -f ${OUTPUTS} public/index.html
+
+install: all
+	if [ "$(PREFIX)" != "public" ]; then cp -r public/* $(PREFIX); fi
