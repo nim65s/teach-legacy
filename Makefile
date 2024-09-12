@@ -27,3 +27,6 @@ clean:
 
 install: all
 	if [ "$(PREFIX)" != "public" ]; then cp -r public/* $(PREFIX); fi
+
+watch:
+	watchexec -r -e md -c reset make -j
