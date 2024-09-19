@@ -1,0 +1,67 @@
+@startuml
+
+class Ville << (M,green) >> {
+    *nom
+    *code_postal
+    *prix/m²
+}
+
+class Local << (A,blue) >> {
+    *nom
+    *ville
+    *surface
+}
+
+class SiègeSocial(Local) << (M,green) >> {
+}
+
+class Usine(Local) << (M,green) >> {
+}
+
+class Machine << (M,green) >> {
+    *nom
+    *usine
+    *prix
+    *n_serie
+}
+
+class Objet << (A,blue) >> {
+    *nom
+    *prix
+}
+
+class Produit(Objet) << (M,green) >> {
+    *premiere_etape
+}
+
+class Ressource(Objet) << (M,green) >> {
+}
+
+class QuantiteRessource << (M,green) >> {
+    *ressource
+    *quantite
+}
+
+class Stock << (M,green) >> {
+    *objet
+    *nombre
+}
+
+class Etape << (M,green) >> {
+    *nom
+    *machine
+    *quantite_ressource
+    *duree
+    *etape_suivante
+}
+
+
+Ville -* Usine::ville
+Usine -* Machine::usine
+Machine -* Etape::machine
+Etape -* Produit::premiere_etape
+Etape::etape_suivante *-right- Etape
+Ressource -* QuantiteRessource::ressource
+QuantiteRessource -* Etape::quantite_ressource
+
+@enduml
