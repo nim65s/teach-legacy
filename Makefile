@@ -1,9 +1,14 @@
 PREFIX ?= public
 SOURCES = $(filter-out README.md, $(wildcard */*/*.md))
 OUTPUTS = $(SOURCES:%.md=public/%.pdf)
+UML_SOURCES = $(wildcard media/*.uml)
+UML_OUTPUTS = $(UML_SOURCES:%.uml=%.png)
 DEST = "/usr/local/homepages/gsaurel/teach"
 
-all: ${OUTPUTS} public/index.html
+all: ${OUTPUTS} ${UML_OUTPUTS} public/index.html
+
+media/%.png: media/%.uml
+	plantuml $<
 
 public/%.pdf: %.md
 	mkdir -p public/$(shell dirname $<)

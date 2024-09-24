@@ -2,6 +2,7 @@
   laas-beamer-theme,
   lib,
   pandoc,
+  plantuml,
   python3,
   source-code-pro,
   source-sans,
@@ -34,10 +35,8 @@ stdenvNoCC.mkDerivation {
     source-code-pro
     source-sans
     source-serif
-  ];
-
-  buildInputs = [
     pandoc
+    plantuml
     python3
     (texlive.combined.scheme-full.withPackages (_: [ laas-beamer-theme ]))
   ];
