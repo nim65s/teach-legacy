@@ -111,16 +111,19 @@ $ git commit -m "setup tooling"
 $ git push
 ```
 
-## Ajout de license et de gitignore
+## Ajout de license
 
 Depuis l’UI github
+
+puis `git pull`
 
 ## Création d’une application
 
 ```bash
 $ cd crayon
 $ ./manage.py startapp high_level
-# éditez crayon/settings.py
+# éditez crayon/settings.py:
+# ajoutez `high_level` dans `INSTALLED_APPS`
 $ git add .
 $ git commit -m "start app high_level"
 $ git push
@@ -143,11 +146,23 @@ $ git push
 - relation vers un objet:
 ```python
 models.ForeignKey(
-    Departement,  # ou "self",
+    Ville,  # ou "self",
     on_delete=models.PROTECT,
     # blank=True, null=True,
     # related_name="+",
 )
+```
+
+## Création des modèles: class Abstraite
+
+```python
+class Local(models.Model):
+    nom = models.CharField(max_length=100)
+    ville = models.ForeignKey(Ville, on_delete=models.PROTECT)
+    surface = models.IntegerField()
+
+    class Meta:
+        abstract = True
 ```
 
 ## Création de l’interface d’administration
