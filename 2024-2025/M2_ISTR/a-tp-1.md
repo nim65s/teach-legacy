@@ -114,6 +114,7 @@ $ git push
 ## License & gitignore
 
 Depuis l’UI github:
+
 - Ajoutez un fichier `LICENSE` et choisissez un template
 - Éditez `.gitignore` et choisissez le template python
 
