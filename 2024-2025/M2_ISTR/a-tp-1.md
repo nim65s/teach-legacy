@@ -161,7 +161,10 @@ models.ForeignKey(
 ```python
 class Local(models.Model):
     nom = models.CharField(max_length=100)
-    ville = models.ForeignKey(Ville, on_delete=models.PROTECT)
+    ville = models.ForeignKey(
+        Ville,
+        on_delete=models.PROTECT
+    )
     surface = models.IntegerField()
 
     class Meta:
