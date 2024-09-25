@@ -200,24 +200,6 @@ $ ./manage.py shell
 ```
 
 ```python
-In [1]: from high_level.models import Etape
-
-In [2]: Etape.objects.filter(machine__nom="perceuse",
-                            quantite_ressource__quantite=64)
-Out[2]: <QuerySet [<Etape: Perçage de 64 baguettes>]>
-
-In [3]: Etape.objects.get(machine__nom="perceuse",
-                         quantite_ressource__quantite=64).duree
-Out[3]: 12
-```
-
-## Ligne de commande: requêtes sur un objet
-
-```
-$ ./manage.py shell
-```
-
-```python
 In [1]: from high_level.models import Ville
 
 In [2]: v = Ville.objects.first()
