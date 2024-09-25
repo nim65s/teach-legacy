@@ -46,7 +46,7 @@ Mail: [gsaurel@laas.fr](mailto::gsaurel@laas.fr)
 
 ## Pre-requis
 
-- Git: `git -v`
+- Git: `git --version`
 - Python: `python -V` (`python3` ?)
 - Pip: `python -m pip -V`
 - Venv: `python -m venv`
@@ -67,11 +67,16 @@ $ django-admin startproject crayon
 
 ## Configuration d’un dépôt distant
 
-- Créer un compte un un dépôt sur github, puis
+- Créer un compte puis un dépôt sur github:
+    - sans fichier README.md
+    - sans license
+    - sans .gitignore
 
 ```bash
 $ ssh-keygen -t ed25519
 $ cat ~/.ssh/id_ed25519.pub
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
 ```
 
 <https://github.com/settings/ssh/new>
