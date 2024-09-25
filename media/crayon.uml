@@ -43,7 +43,7 @@ class QuantiteRessource << (M,green) >> {
 }
 
 class Stock << (M,green) >> {
-    *objet
+    *ressource
     *nombre
 }
 
@@ -67,6 +67,6 @@ Etape -* Produit::premiere_etape
 Etape::etape_suivante *-right- Etape
 Ressource -* QuantiteRessource::ressource
 QuantiteRessource -* Etape::quantite_ressource
-Objet -* Stock::objet
+Ressource -* Stock::ressource
 
 @enduml
