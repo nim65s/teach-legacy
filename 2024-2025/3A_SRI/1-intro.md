@@ -117,3 +117,8 @@ Mail: [gsaurel@laas.fr](mailto::gsaurel@laas.fr)
 
 - C/C++
 - Python
+
+### Evaluation
+
+- TP
+- Partiel
