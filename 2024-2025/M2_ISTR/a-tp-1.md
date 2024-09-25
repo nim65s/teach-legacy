@@ -111,9 +111,11 @@ $ git commit -m "setup tooling"
 $ git push
 ```
 
-## Ajout de license
+## License & gitignore
 
-Depuis l’UI github
+Depuis l’UI github:
+- Ajoutez un fichier `LICENSE` et choisissez un template
+- Éditez `.gitignore` et choisissez le template python
 
 puis `git pull`
 
