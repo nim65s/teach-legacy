@@ -24,6 +24,7 @@ deploy:
     - git checkout main
     - git reset --hard $CI_COMMIT_SHA
   script:
+    - chown -R a+rw public
     - touch public/20*/*/*.pdf
     - make -j deploy
     - git push git@github.com:nim65s/teach main
