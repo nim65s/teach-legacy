@@ -1,6 +1,5 @@
-image: ghcr.io/nixos/nix
-
 build:
+  image: ghcr.io/nixos/nix
   stage: build
   script:
     - nix --extra-experimental-features "nix-command flakes" flake check
@@ -11,6 +10,7 @@ build:
       - public
 
 deploy:
+  image: gitlab.laas.fr:4567/gsaurel/talks
   stage: deploy
   only:
     refs:
@@ -24,6 +24,6 @@ deploy:
     - git checkout main
     - git reset --hard $CI_COMMIT_SHA
   script:
-    - touch public/*.pdf
-    - nix-shell -p gnumake -p rsync --command "make -j deploy"
+    - touch public/20*/*/*.pdf
+    - make -j deploy
     - git push git@github.com:nim65s/teach main
