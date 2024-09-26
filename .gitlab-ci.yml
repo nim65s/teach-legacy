@@ -5,7 +5,7 @@ build:
     - nix --extra-experimental-features "nix-command flakes" flake check
     - nix --extra-experimental-features "nix-command flakes" build
     - cp -r result/* public/
-    - chown -R 5495:1046 public  # TOOD: remove this gsaurel/talks docker
+    - chown -R 5495:1046 public .git # TOOD: remove this gsaurel/talks docker
   artifacts:
     paths:
       - public
