@@ -5,7 +5,8 @@ build:
     - nix --extra-experimental-features "nix-command flakes" flake check
     - nix --extra-experimental-features "nix-command flakes" build
     - cp -r result/* public/
-    - chmod -R a+rw public
+    - id
+    - chown -R 1000:1000
   artifacts:
     paths:
       - public
@@ -26,5 +27,6 @@ deploy:
     - git reset --hard $CI_COMMIT_SHA
   script:
     - touch public/20*/*/*.pdf
+    - id
     - make -j deploy
     - git push git@github.com:nim65s/teach main
