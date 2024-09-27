@@ -45,6 +45,7 @@ class QuantiteRessource << (M,green) >> {
 class Stock << (M,green) >> {
     *ressource
     *nombre
+    *usine
 }
 
 class Etape << (M,green) >> {
@@ -68,5 +69,6 @@ Etape::etape_suivante *-right- Etape
 Ressource -* QuantiteRessource::ressource
 QuantiteRessource -* Etape::quantite_ressource
 Ressource -* Stock::ressource
+Usine -* Stock::usine
 
 @enduml

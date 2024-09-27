@@ -227,7 +227,7 @@ class MachineModelTests(TestCase):
         self.assertEqual(Machine.objects.count(), 0)
         Machine.objects.create(nom="scie",
                                prix=1_000,
-                               n_serie="1683AI2")
+                               n_serie=44365)
         self.assertEqual(Machine.objects.count(), 1)
 ```
 
@@ -241,6 +241,7 @@ Implémentez une méthode "`def costs(self):`" dans chaque modèle où ça a un 
 - `Machine`
 - `QuantiteIngredient`
 - `Usine`
+- `Stock`
 
 ## Écrire un test unitaire
 
