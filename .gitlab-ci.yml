@@ -1,17 +1,14 @@
+image: gitlab.laas.fr:4567/gsaurel/teach
+
 build:
-  image: ghcr.io/nixos/nix
   stage: build
   script:
-    - nix --extra-experimental-features "nix-command flakes" flake check
-    - nix --extra-experimental-features "nix-command flakes" build
-    - cp -r result/* public/
-    - chown -R 5495:1046 public .git # TOOD: remove this gsaurel/talks docker
+    - make -j
   artifacts:
     paths:
       - public
 
 deploy:
-  image: gitlab.laas.fr:4567/gsaurel/talks
   stage: deploy
   only:
     refs:

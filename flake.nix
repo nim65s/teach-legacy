@@ -35,12 +35,21 @@
             nativeBuildInputs = [ config.treefmt.build.wrapper ];
             inputsFrom = [ self'.packages.default ];
             packages = [
+              pkgs.git
+              pkgs.openssh
               pkgs.pdfpc
               pkgs.watchexec
             ];
           };
-          packages.default = pkgs.callPackage ./default.nix {
-            laas-beamer-theme = inputs.laas-beamer-theme.packages.${system}.default;
+          packages = {
+            default = pkgs.callPackage ./default.nix {
+              laas-beamer-theme = inputs.laas-beamer-theme.packages.${system}.default;
+            };
+            docker = pkgs.dockerTools.buildNixShellImage {
+              name = "gitlab.laas.fr:4567/gsaurel/teach";
+              tag = "latest";
+              drv = self'.devShells.default;
+            };
           };
           treefmt = {
             projectRootFile = "flake.nix";
