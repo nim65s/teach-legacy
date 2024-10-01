@@ -65,7 +65,7 @@ Ville -* Local::ville
 Machine -o Usine::machine
 Machine -* Etape::machine
 Etape -* Produit::premiere_etape
-Etape::etape_suivante *-right- Etape
+Etape::etape_suivante o-right- Etape
 Ressource -* QuantiteRessource::ressource
 QuantiteRessource -* Etape::quantite_ressource
 Ressource -* Stock::ressource

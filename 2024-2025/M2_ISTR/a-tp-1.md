@@ -44,6 +44,8 @@ Matrix: [@gsaurel:laas.fr](https://matrix.to/\#/@gsaurel:laas.fr)
 
 Mail: [gsaurel@laas.fr](mailto::gsaurel@laas.fr)
 
+# Séance 1
+
 ## Pre-requis
 
 - Git: `git --version`
@@ -192,6 +194,16 @@ $ ./manage.py runserver
 - Ajoutez une méthode "`__str__(self):`" dans chaque modèle
 - Créez au moins un objet de chaque modèle
 
+# Séance 2
+
+## On vérifie que tout est dans git
+
+Dans un nouveau dossier:
+```
+git clone git@github.com:votre-nom/votre-dépôt.git
+```
+
+
 ## Ligne de commande: requêtes sur un modèle
 
 ```
@@ -260,6 +272,8 @@ On s’attend à ce que `Usine.objects.first().costs()` vaille 110 750 €
 ## Approvisionnement (facultatif)
 
 - Achetez automatiquement les stocks de l’usine en fonction des recettes choisies
+
+# Séance 3
 
 ## JSON
 
