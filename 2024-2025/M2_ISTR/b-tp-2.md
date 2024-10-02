@@ -84,6 +84,8 @@ ref. <https://github.com/libcpr/cpr>
 - Incluez `<nlohmann/json.hpp>`
 - Parsez le texte JSON fourni dans la réponse HTTP
 
+ref. <https://github.com/nlohmann/json/>
+
 ## Plus de constructeurs
 
 - Ajoutez un constructeur prenant un paramètre `json data`
