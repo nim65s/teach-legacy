@@ -68,7 +68,7 @@ Créez de fichier `low_level.cpp`:
 ```
 $ cmake -B build -S .
 $ cmake --build build
-$ build/low_level
+$ ./build/low_level
 $ echo build >> .gitignore
 ```
 
