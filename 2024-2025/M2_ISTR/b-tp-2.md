@@ -77,6 +77,8 @@ $ echo build >> .gitignore
 - Incluez `<cpr/cpr.h>`
 - Faites une requette HTTP vers votre route pour un département
 
+ref. <https://github.com/libcpr/cpr>
+
 ## Conversion des données
 
 - Incluez `<nlohmann/json.hpp>`
