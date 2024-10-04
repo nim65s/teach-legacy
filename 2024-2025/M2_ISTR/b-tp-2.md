@@ -75,7 +75,7 @@ $ echo build >> .gitignore
 ## Récupération des données
 
 - Incluez `<cpr/cpr.h>`
-- Faites une requette HTTP vers votre route pour un département
+- Faites une requette HTTP vers votre route pour une Ville
 
 ref. <https://github.com/libcpr/cpr>
 
