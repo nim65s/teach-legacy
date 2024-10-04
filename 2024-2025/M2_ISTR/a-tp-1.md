@@ -278,7 +278,8 @@ On s’attend à ce que `Usine.objects.first().costs()` vaille 110 750 €
 ## JSON
 
 - Implémentez une méthode "`def json(self):`" pour sérialiser chaque modèle dans `high_level/models.py`
-- Implémentez des `DetailView` pour vos classes qui appellement ces `.json()` dans `high_level/views.py`
+- Implémentez des `DetailView` pour vos classes qui appellement ces `.json()` dans `high_level/views.py`.
+  Pour cela, utilisez `django.http.JsonResponse` dans la méthode `render_to_response`
 - Ajoutez des routes pour ces vues dans `crayon/urls.py`
 - Testez les avec `curl`: toutes les informations sur un modèle en particulier doivent apparaître
 
