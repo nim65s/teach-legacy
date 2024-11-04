@@ -63,10 +63,12 @@ $ cd tp-multithreading
 
 ## Configuration d’un dépôt distant
 
-- Créer un compte puis un dépôt sur github:
+- Sur <https://github.com>, créer un compte puis un dépôt:
     - sans fichier README.md
     - sans license
     - sans .gitignore
+
+. . .
 
 ```bash
 $ ssh-keygen -t ed25519
@@ -83,11 +85,11 @@ $ git config --global user.email johndoe@example.fr
 ## Publication du projet
 
 ```bash
-$ git branch -M main
 $ git remote add origin \
     git@github.com:votre-nom/votre-dépôt.git
 $ git add .
 $ git commit -m "start uv project"
+$ git branch -M main
 $ git push -u origin main
 ```
 
@@ -115,7 +117,7 @@ $ git push
 
 Depuis l’UI github:
 
-- Ajoutez un fichier `LICENSE` et choisissez un template
+- Ajoutez un fichier appelé `LICENSE` et choisissez un template
 
 puis `git pull`
 
@@ -125,6 +127,8 @@ Ajoutez un fichier `.github/workflows/ci.yml`, qui vérifie:
 
 - les outils: `uv run pre-commit run -a`
 - les tests: `uv run python -m unittest`
+
+et qui s’execute `on: [push]`
 
 ref. <https://docs.astral.sh/uv/guides/integration/github>
 
@@ -172,8 +176,6 @@ FAILED (failures=1)
 ```
 
 ## Git
-
-
 
 ```
 $ git add .
