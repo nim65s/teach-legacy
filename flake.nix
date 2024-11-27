@@ -67,7 +67,7 @@
               name = "gitlab.laas.fr:4567/gsaurel/teach";
               tag = "latest";
               config = {
-                entrypoint = [ (pkgs.lib.getExe pkgs.bashInteractive) ];
+                entrypoint = [ (pkgs.lib.getExe pkgs.bashInteractive) "-c" ];
                 Env = [
                   "PATH=${pkgs.lib.makeBinPath (self'.devShells.bash.nativeBuildInputs ++ [ pkgs.bashInteractive ])}"
                 ];
