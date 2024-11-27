@@ -10,7 +10,7 @@ all: ${OUTPUTS} ${UML_OUTPUTS} public/index.html
 media/%.png: media/%.uml
 	plantuml $<
 
-public/%.pdf: %.md
+public/%.pdf: tmp %.md
 	mkdir -p public/$(shell dirname $<)
 	pandoc -s \
 		-t beamer \
@@ -35,3 +35,6 @@ install: all
 
 watch:
 	watchexec -r -e md -c reset make -j
+
+tmp:
+	mkdir -p /tmp
