@@ -56,6 +56,7 @@
                 pkgs.coreutils
                 pkgs.bashInteractive
                 pkgs.gnugrep
+                pkgs.gnumake
               ];
             });
           };
