@@ -28,7 +28,7 @@ stdenvNoCC.mkDerivation {
 
   makeFlags = [
     "PREFIX=${placeholder "out"}"
-    "-j"
+    #"-j"
   ];
 
   nativeBuildInputs = [
