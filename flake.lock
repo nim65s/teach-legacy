@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1725234343,
-        "narHash": "sha256-+ebgonl3NbiKD2UD0x4BszCZQ6sTfL4xioaM49o5B3Y=",
+        "lastModified": 1730504689,
+        "narHash": "sha256-hgmguH29K2fvs9szpq2r3pz2/8cJd2LPS+b4tfNFCwE=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "567b938d64d4b4112ee253b9274472dc3a346eb6",
+        "rev": "506278e768c2a08bec68eb62932193e341f55c90",
         "type": "github"
       },
       "original": {
@@ -46,11 +46,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1716363644,
-        "narHash": "sha256-c1sXeTn5mxmEg35Abfedesln63sgsxeTpbr+P+aj3bM=",
+        "lastModified": 1730746561,
+        "narHash": "sha256-x945Y+liNs9Hy7bz8wO7Ivh0XhZZ75LmFkpuLHI1zzw=",
         "ref": "refs/heads/main",
-        "rev": "ea36168ab797c13691026b6230f7fe573f5b9399",
-        "revCount": 11,
+        "rev": "8583671be0ab9e210691fd56566de9cc3b6fa0ed",
+        "revCount": 12,
         "type": "git",
         "url": "https://gitlab.laas.fr/gsaurel/laas-beamer-theme"
       },
@@ -61,11 +61,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1725103162,
-        "narHash": "sha256-Ym04C5+qovuQDYL/rKWSR+WESseQBbNAe5DsXNx5trY=",
+        "lastModified": 1732521221,
+        "narHash": "sha256-2ThgXBUXAE1oFsVATK1ZX9IjPcS4nKFOAjhPNKuiMn0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "12228ff1752d7b7624a54e9c1af4b222b3c1073b",
+        "rev": "4633a7c72337ea8fd23a4f2ba3972865e3ec685d",
         "type": "github"
       },
       "original": {
@@ -105,11 +105,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1725269261,
-        "narHash": "sha256-NdxEmL5Ytk0mkVH1bj2FyqWSFbcedZcmpdk0nP0Gq+E=",
+        "lastModified": 1732643199,
+        "narHash": "sha256-uI7TXEb231o8dkwB5AUCecx3AQtosRmL6hKgnckvjps=",
         "owner": "numtide",
         "repo": "treefmt-nix",
-        "rev": "eebc332d1eeba66c46a3c9b8201cf0068dba892e",
+        "rev": "84637a7ab04179bdc42aa8fd0af1909fba76ad0c",
         "type": "github"
       },
       "original": {
