@@ -2,7 +2,7 @@
   description = "Teaching";
 
   inputs = {
-    nix2container ={
+    nix2container = {
       url = "github:nlewo/nix2container";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
@@ -68,7 +68,9 @@
               tag = "latest";
               config = {
                 entrypoint = [ (pkgs.lib.getExe pkgs.bashInteractive) ];
-                Env = [ "PATH=${pkgs.lib.makeBinPath self'.devShells.bash.nativeBuildInputs}" ];
+                Env = [
+                  "PATH=${pkgs.lib.makeBinPath (self'.devShells.bash.nativeBuildInputs ++ [ pkgs.bashInteractive ])}"
+                ];
               };
               copyToRoot = self'.devShells.bash;
               maxLayers = 120;
