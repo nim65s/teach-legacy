@@ -3,6 +3,7 @@ image: gitlab.laas.fr:4567/gsaurel/teach
 build:
   stage: build
   script:
+    - fc-list | grep 'Source Serif 4'
     - make
   artifacts:
     paths:

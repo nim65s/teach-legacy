@@ -55,6 +55,7 @@
               nativeBuildInputs = super.nativeBuildInputs ++ [
                 pkgs.coreutils
                 pkgs.bashInteractive
+                pkgs.fontconfig.bin
                 pkgs.gnugrep
                 pkgs.gnumake
               ];
