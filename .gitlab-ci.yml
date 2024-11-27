@@ -3,7 +3,7 @@ image: gitlab.laas.fr:4567/gsaurel/teach
 build:
   stage: build
   script:
-    - make -j
+    - make
   artifacts:
     paths:
       - public
