@@ -40,19 +40,38 @@
           ...
         }:
         {
-          devShells.default = pkgs.mkShell {
-            nativeBuildInputs = [ config.treefmt.build.wrapper ];
-            inputsFrom = [ self'.packages.default ];
-            packages = [
-              pkgs.git
-              pkgs.openssh
-              pkgs.pdfpc
-              pkgs.watchexec
-            ];
+          devShells = {
+            default = pkgs.mkShell {
+              nativeBuildInputs = [ config.treefmt.build.wrapper ];
+              inputsFrom = [ self'.packages.default ];
+              packages = [
+                pkgs.git
+                pkgs.openssh
+                pkgs.pdfpc
+                pkgs.watchexec
+              ];
+            };
+            bash = self'.devShells.default.overrideAttrs (super: {
+              nativeBuildInputs = super.nativeBuildInputs ++ [
+                pkgs.coreutils
+                pkgs.bashInteractive
+                pkgs.gnugrep
+              ];
+            });
           };
           packages = {
             default = pkgs.callPackage ./default.nix {
               laas-beamer-theme = inputs.laas-beamer-theme.packages.${system}.default;
+            };
+            container = inputs.nix2container.packages.${system}.nix2container.buildImage {
+              name = "gitlab.laas.fr:4567/gsaurel/teach";
+              tag = "latest";
+              config = {
+                entrypoint = [ (pkgs.lib.getExe pkgs.bashInteractive) ];
+                Env = [ "PATH=${pkgs.lib.makeBinPath self'.devShells.bash.nativeBuildInputs}" ];
+              };
+              copyToRoot = self'.devShells.bash;
+              maxLayers = 120;
             };
             docker = pkgs.dockerTools.buildNixShellImage {
               name = "gitlab.laas.fr:4567/gsaurel/teach";
