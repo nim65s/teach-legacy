@@ -72,7 +72,13 @@
                 entrypoint = [ (pkgs.lib.getExe pkgs.bashInteractive) "-c" ];
                 Env = [
                   "PATH=${pkgs.lib.makeBinPath (self'.devShells.bash.nativeBuildInputs ++ [ pkgs.bashInteractive ])}"
-                  "FONTCONFIG_FILE=${pkgs.fontconfig.out}/etc/fonts/fonts.conf"
+                  "FONTCONFIG_FILE=${pkgs.makeFontsConf {
+                    fontDirectories = [
+                      pkgs.source-code-pro
+                      pkgs.source-sans
+                      pkgs.source-serif
+                    ];
+                  }}"
                 ];
               };
               copyToRoot = self'.devShells.bash;
