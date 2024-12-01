@@ -5,7 +5,7 @@ UML_SOURCES = $(wildcard media/*.uml)
 UML_OUTPUTS = $(UML_SOURCES:%.uml=%.png)
 DEST = "/usr/local/homepages/gsaurel/teach"
 
-all: tmp ${OUTPUTS} ${UML_OUTPUTS} public/index.html
+all: ${OUTPUTS} ${UML_OUTPUTS} public/index.html
 
 media/%.png: media/%.uml
 	plantuml $<
@@ -35,6 +35,3 @@ install: all
 
 watch:
 	watchexec -r -e md -c reset make -j
-
-tmp:
-	mkdir -p /tmp
