@@ -50,10 +50,6 @@ Mail: [gsaurel@laas.fr](mailto::gsaurel@laas.fr)
 - Git: `git --version`
 - uv: `curl -LsSf \ https://astral.sh/uv/install.sh | sh`
 
-. . .
-
-Dans le terminal courant: `source $HOME/.cargo/env`
-
 ## Création d’un projet
 
 ```bash
