@@ -69,16 +69,21 @@
               name = "gitlab.laas.fr:4567/gsaurel/teach";
               tag = "latest";
               config = {
-                entrypoint = [ (pkgs.lib.getExe pkgs.bashInteractive) "-c" ];
+                entrypoint = [
+                  (pkgs.lib.getExe pkgs.bashInteractive)
+                  "-c"
+                ];
                 Env = [
                   "PATH=${pkgs.lib.makeBinPath (self'.devShells.bash.nativeBuildInputs ++ [ pkgs.bashInteractive ])}"
-                  "FONTCONFIG_FILE=${pkgs.makeFontsConf {
-                    fontDirectories = [
-                      pkgs.source-code-pro
-                      pkgs.source-sans
-                      pkgs.source-serif
-                    ];
-                  }}"
+                  "FONTCONFIG_FILE=${
+                    pkgs.makeFontsConf {
+                      fontDirectories = [
+                        pkgs.source-code-pro
+                        pkgs.source-sans
+                        pkgs.source-serif
+                      ];
+                    }
+                  }"
                 ];
               };
               copyToRoot = self'.devShells.bash;
