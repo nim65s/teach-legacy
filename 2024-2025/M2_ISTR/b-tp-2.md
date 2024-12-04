@@ -14,8 +14,8 @@ monofont: Source Code Pro
 
 \centering
 
-[`https://homepages.laas.fr/gsaurel/teach/
-2024-2025/M2_ISTR/b-tp-2.pdf`](https://homepages.laas.fr/gsaurel/teach/2024-2025/M2_ISTR/b-tp-2.pdf)
+[`https://nim65s.github.io/teach/
+2024-2025/M2_ISTR/b-tp-2.pdf`](https://nim65s.github.io/teach/2024-2025/M2_ISTR/b-tp-2.pdf)
 
 ### Under License
 
