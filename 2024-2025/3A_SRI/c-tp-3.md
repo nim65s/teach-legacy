@@ -61,7 +61,7 @@ def to_json(self) -> str:
 Ajouter une méthode dans la class `Task`:
 
 ```python
-@classmethod
+@staticmethod
 def from_json(text: str) -> "Task":
 ```
 
