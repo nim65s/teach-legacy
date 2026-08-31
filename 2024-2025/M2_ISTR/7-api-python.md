@@ -145,15 +145,16 @@ Out[5]: <Candidate: Candidate object (2)>
 # election/models.py
 class Election(models.Model):
     ...
+
     def __str__(self):
         return self.title
 
 
 class Candidate(models.Model):
     ...
+
     def __str__(self):
         return self.name
-
 ```
 
 ## Generate an admin UI
@@ -187,6 +188,7 @@ from .models import Election
 
 class ElectionListView(ListView):
     model = Election
+
 
 class ElectionDetailView(DetailView):
     model = Election
@@ -240,6 +242,7 @@ urlpatterns = [
 # election/views.py
 from django.views.generic import RedirectView
 from django.views.generic.detail import SingleObjectMixin
+
 
 class VoteView(SingleObjectMixin, RedirectView):
     model = Candidate
