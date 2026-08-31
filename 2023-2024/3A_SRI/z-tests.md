@@ -51,11 +51,13 @@ Mail: [gsaurel@laas.fr](mailto::gsaurel@laas.fr)
 ```python
 import unittest
 
+
 class TestAddition(unittest.TestCase):
     def test_addition(self):
         self.assertEqual(1 + 1, 2)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
 ```
 
@@ -66,11 +68,13 @@ import unittest
 
 from my_lib import my_add
 
+
 class TestMyAddition(unittest.TestCase):
     def test_my_addition(self):
         self.assertEqual(my_add(1, 1), 2)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
 ```
 
@@ -129,6 +133,7 @@ import unittest
 
 from my_robot import QuadrupedRobot
 
+
 class TestMove(unittest.TestCase):
     def test_move(self):
         robot = QuadrupedRobot()
@@ -137,7 +142,8 @@ class TestMove(unittest.TestCase):
         self.assertGreater(robot.get_z(), 0.1)
         self.assertGreater(robot.get_x(), 9)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
 ```
 

@@ -163,10 +163,7 @@ models.ForeignKey(
 ```python
 class Local(models.Model):
     nom = models.CharField(max_length=100)
-    ville = models.ForeignKey(
-        Ville,
-        on_delete=models.PROTECT
-    )
+    ville = models.ForeignKey(Ville, on_delete=models.PROTECT)
     surface = models.IntegerField()
 
     class Meta:
@@ -228,7 +225,6 @@ Out[5]: 209
 Éditez `high_level/tests.py`:
 
 ```python
-
 from django.test import TestCase
 
 from .models import Machine
@@ -237,9 +233,7 @@ from .models import Machine
 class MachineModelTests(TestCase):
     def test_machine_creation(self):
         self.assertEqual(Machine.objects.count(), 0)
-        Machine.objects.create(nom="scie",
-                               prix=1_000,
-                               n_serie=44365)
+        Machine.objects.create(nom="scie", prix=1_000, n_serie=44365)
         self.assertEqual(Machine.objects.count(), 1)
 ```
 

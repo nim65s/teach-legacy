@@ -349,6 +349,7 @@ class LeggedRobot(Robot):
     def walk(self):
         self.battery -= 10
 
+
 if __name__ == "__main__":
     robot = LeggedRobot()
     print(robot.get_battery(), "% remaining")

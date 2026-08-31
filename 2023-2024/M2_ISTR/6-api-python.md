@@ -137,15 +137,16 @@ Out[5]: <Choice: Choice object (2)>
 # mysite/models.py
 class Question(models.Model):
     ...
+
     def __str__(self):
         return self.question_text
 
 
 class Choice(models.Model):
     ...
+
     def __str__(self):
         return self.choice_text
-
 ```
 
 ## Generate an admin UI
@@ -240,6 +241,7 @@ from django.views.generic import RedirectView
 from django.views.generic.detail import SingleObjectMixin
 
 from .models import Choice, Question
+
 
 class ChoiceDetailView(SingleObjectMixin, RedirectView):
     model = Choice
